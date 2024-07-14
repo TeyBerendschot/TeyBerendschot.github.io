@@ -107,6 +107,32 @@ function showControls(){
   alert("Place a tent: t\nPlace a patch of grass: g\nNavigate: arrow keys\nRestart the puzzle: space bar\nClear cell: backspace/delete ");
 }
 
+function addTent(){
+  if(currentCol>-1 && currentRow>-1){
+    if(grid[currentRow][currentCol]!="b"){
+      grid[currentRow][currentCol]="t";
+    }
+  }
+}
+
+function addGrass(){
+  if(currentCol>-1 && currentRow>-1){
+    if(grid[currentRow][currentCol]!="b"){
+      grid[currentRow][currentCol]="g";
+    }
+  }
+}
+
+function clearInput(){
+  for(let i=0;i<rows;i++){
+    for(let j=0;j<cols;j++){
+      if(grid[i][j]!="b"){
+        grid[i][j]=" ";
+      }
+    }
+  }
+}
+
 //Load the images of the tents and trees
 function preload(){
   for(let i=1;i<21;i++){
@@ -266,7 +292,7 @@ function setup() {
   }
  }
  let ruleButton = createButton("Rules");
-  ruleButton.mousePressed(showRules)
+  ruleButton.mousePressed(showRules);
   ruleButton.parent("controlButtonContainer");
 
  let controlsButton= createButton("Controls");
@@ -275,7 +301,25 @@ function setup() {
 
  let newGameButton=createButton("New Game");
  newGameButton.mousePressed(newGame);
- newGameButton.parent("controlButtonContainer")
+ newGameButton.parent("controlButtonContainer");
+
+let clearGridButton=createButton("Clear input");
+ clearGridButton.mousePressed(clearInput);
+ clearGridButton.parent("controlButtonContainer");
+
+ let addTentButton=createButton("");
+ addTentButton.mousePressed(addTent);
+ addTentButton.class("inputButton")
+ addTentButton.style("background-image", "url(./Images/Tentje/tent15.jpg)")
+ addTentButton.style("background-size", "100%")
+ addTentButton.parent("addButtonContainer"); 
+
+ let addGrassButton=createButton("");
+ addGrassButton.mousePressed(addGrass);
+ addGrassButton.class("inputButton")
+ addGrassButton.style("background-image", "url(./Images/Grasje/gras1.jpg)")
+ addGrassButton.style("background-size", "100%")
+ addGrassButton.parent("addButtonContainer"); 
 
 totalHorizontalTents=horizontalClue;
 totalVerticalTents=verticalClue;
