@@ -100,7 +100,7 @@ totalVerticalTents=v[randomBoardID];
 
 //Show the rules of the game
 function showRules(){
-  alert("Place tents on the board such that each column and row contain the scpecified number of tents. Campers like their privacy. Therefore, tents cannot be placed in adjacent boxes (also not diagonally). Make a one to one correspondence between tents and trees such that each tent is places in a cell orthogonally adjacent to the cell of its corresponding tree.");
+  alert("Place tents on the board such that each column and row contain the scpecified number of tents. Campers value their privacy. Therefore, tents cannot be placed in adjacent boxes (also not diagonally). Make a one to one correspondence between tents and trees such that each tent is places in a cell orthogonally adjacent to the cell of its corresponding tree.");
 }
 
 function showControls(){
@@ -378,11 +378,6 @@ let rndInt;
     else if((e.code === "Backspace" || e.code === "Delete")&& grid[currentRow][currentCol]!="b"){
       grid[currentRow][currentCol]=" ";
     }
-    // else if(e.key === "b"){
-    //   rndInt = Math.floor(Math.random() * 20);
-    //   grid[currentRow][currentCol]="b";
-    //   tentGrid[currentRow][currentCol]= rndInt; 
-    // }
     else if((e.key === "t") && nextToTree([currentRow,currentCol],grid)){
       rndInt = Math.floor(Math.random() * 20);
       grid[currentRow][currentCol]="t";
