@@ -67,6 +67,33 @@ b.push([[" ","b"," "," "," ","b"],
 h.push([2,1,1,1,1,1]);
 v.push([2,0,2,1,2,0]);
 
+b.push([[" "," "," "," "," ","b"],
+  [" ","b"," ","b"," "," "],
+  [" "," "," "," "," "," "],
+  [" "," ","b","b"," "," "],
+  [" "," "," ","b"," "," "],
+  [" ","b"," "," ","b","b"],]);
+h.push([1,1,1,1,1,2]);
+v.push([1,1,1,2,1,1]);
+
+b.push([[" "," "," "," "," "," "],
+  ["b"," "," ","b","b"," "],
+  ["b"," "," "," ","b"," "],
+  [" "," "," "," "," "," "],
+  [" ","b"," "," "," "," "],
+  [" "," "," "," "," ","b"],]);
+h.push([1,1,2,1,1,1]);
+v.push([1,1,1,1,2,1]);
+
+b.push([[" "," "," "," "," "," "],
+  [" ","b"," ","b"," "," "],
+  [" ","b"," "," "," ","b"],
+  [" "," "," "," "," "," "],
+  ["b"," "," "," ","b"," "],
+  [" ","b"," "," "," "," "],]);
+h.push([1,1,1,1,1,2]);
+v.push([2,1,1,1,1,1]);
+
 //An even easier example
 
 // b.push([["b"," ","b"," "],
@@ -100,7 +127,7 @@ totalVerticalTents=v[randomBoardID];
 
 //Show the rules of the game
 function showRules(){
-  alert("Place tents on the board such that each column and row contain the scpecified number of tents. Campers value their privacy. Therefore, tents cannot be placed in adjacent boxes (also not diagonally). Make a one to one correspondence between tents and trees such that each tent is places in a cell orthogonally adjacent to the cell of its corresponding tree.");
+  alert("Place tents on the board such that each column and row contain the scpecified number of tents. Campers value their privacy. Therefore, tents cannot be placed in adjacent boxes (also not diagonally). Make a one to one correspondence between tents and trees such that each tent is placed in a cell orthogonally adjacent to the cell of its corresponding tree.");
 }
 
 function showControls(){
