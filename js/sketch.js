@@ -420,12 +420,12 @@ let rndInt;
     }
     else if((e.key === "t") && nextToTree([currentRow,currentCol],grid)){
       rndInt = Math.floor(Math.random() * 20);
-      grid[currentRow][currentCol]="t";
+      addTent();
       tentGrid[currentRow][currentCol]= rndInt;
     }
     else if(e.key === "g"){
-      rndInt = Math.floor(Math.random() * 3);
-      grid[currentRow][currentCol]="g";
+      rndInt = Math.floor(Math.random() * 20);
+      addGrass();
       tentGrid[currentRow][currentCol]= rndInt;
     }
   })
