@@ -67,15 +67,6 @@ b.push([[" ","b"," "," "," ","b"],
 h.push([2,1,1,1,1,1]);
 v.push([2,0,2,1,2,0]);
 
-b.push([[" "," "," "," "," ","b"],
-  [" ","b"," ","b"," "," "],
-  [" "," "," "," "," "," "],
-  [" "," ","b","b"," "," "],
-  [" "," "," ","b"," "," "],
-  [" ","b"," "," ","b","b"],]);
-h.push([1,1,1,1,1,2]);
-v.push([1,1,1,2,1,1]);
-
 b.push([[" "," "," "," "," "," "],
   ["b"," "," ","b","b"," "],
   ["b"," "," "," ","b"," "],
@@ -123,6 +114,8 @@ function newGame(){
 grid=b[randomBoardID];
 totalHorizontalTents=h[randomBoardID];
 totalVerticalTents=v[randomBoardID];
+
+clearInput();
 }
 
 //Show the rules of the game
