@@ -102,6 +102,7 @@ function validTentPlacement(grid){
               if((k!=0||l!=0)&&grid[i+k][j+l]=="t"){
                 let coor = [i,j];
                 let coorString=coor.toString();
+                //Make sure no duplicates are added by converting coordinates to strings
                 if(!(uniqueArr.has(coorString))){
                 arr.add(coor);
                 uniqueArr.add(coorString);
