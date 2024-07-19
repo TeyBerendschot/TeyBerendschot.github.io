@@ -91,6 +91,7 @@ function make2DArray(rows,cols){
 //Returns all the coordinates of illegally placed tents
 function validTentPlacement(grid){
   const arr=new Set();
+  const uniqueArr=new Set();
   for(let i=0;i<rows;i++){
     for(let j=0;j<cols;j++){
       if(grid[i][j]=="t"){
@@ -99,7 +100,12 @@ function validTentPlacement(grid){
             //Take care of index issues coused by the borders of the grid
             if(-1<i+k&& i+k<rows && -1<j+l && j+l<cols){
               if((k!=0||l!=0)&&grid[i+k][j+l]=="t"){
-                arr.add([i,j]);
+                let coor = [i,j];
+                let coorString=coor.toString();
+                if(!(uniqueArr.has(coorString))){
+                arr.add(coor);
+                uniqueArr.add(coorString);
+                }
             }
           }
           }
