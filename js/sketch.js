@@ -3,7 +3,7 @@
 
 //Set the dimensions of the board
 let margin=50;
-let squareSize=60;
+let squareSize=70;
 
 let tentImage=Array(20);
 let treeImage=Array(20);
